@@ -88,7 +88,7 @@ header("location: foodlist.php"); //Redirecting to myrestaurant Page
 
     <div class="container">
     <div class="jumbotron">
-     <h1>Hi Guest,<br> Welcome to <span class="edit"> Foodshala </span></h1>
+     <h1>Hi Friend,<br> Welcome to <span class="edit"> Foodshala </span></h1>
      <br>
    <p>Kindly LOGIN to continue.</p>
     </div>
