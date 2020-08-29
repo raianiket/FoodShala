@@ -125,7 +125,7 @@ else {
 
     <div class="wide">
       	<div class="col-xs-5 line"><hr></div>
-        <div  class="col-xs-2 logo"><img src="images/logo.png" style="height:165px;"></div>
+        <div  class="col-xs-2 logo"><img src="images/logo.jpg" style="height:165px;"></div>
         <div class="col-xs-5 line"><hr></div>
         <div class="tagline"><br><br><br><br><br><br><br><br><br><br>Nothing. Brings. People. Together. Like. Good. Food. </div>
     </div>
