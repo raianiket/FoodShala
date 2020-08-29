@@ -65,11 +65,11 @@ CREATE TABLE `FOOD` (
 
 INSERT INTO `FOOD` (`F_ID`, `name`, `price`, `description`, `R_ID`, `images_path`) VALUES
 (58, 'Paneer Butter Masala', 280, 'Paneer Butter Masala loaded with cheese, Paneer chunks, onion & Mayo and lot of secret things :).', 1, 'images/paneer-butter-masala.jpg'),
-(59, 'Masala Chicken', 60, 'Masala Chicken - Well cooked chicken & served with grilled onions and tomatoes.', 2, 'images/Chicken-Masala.jpg'),
+(59, 'Masala Chicken', 360, 'Masala Chicken - Well cooked chicken & served with grilled onions and tomatoes.', 2, 'images/Chicken-Masala.jpg'),
 (60, 'Tutti Fruity Icecream', 99, 'can You Lose all senses over this very delicious tutti fruity flavour.', 3, 'images/tutti-frutti.jpg'),
-(61, 'Cappuccino-Coffee', 80, 'Cappuccino - a perfect stress buster coffee.', 1, 'images/Cappuccino.jpg'),
+(61, 'Cappuccino-Coffee', 150, 'Cappuccino - a perfect stress buster coffee.', 1, 'images/Cappuccino.jpg'),
 (62, 'Cheese Egg-roll', 65, 'Cheese Egg-roll is very Delicious provided by kathi. Order now!!!', 2, 'images/Eggroll.jpg'),
-(63, 'Massive Indian Thali', 75, 'Massive Indian Thali is a very special thali, it contains 29 indian states flavour.:)', 3, 'images/thali.jpg');
+(63, 'Massive Indian Thali', 105, 'Massive Indian Thali is a very special thali, it contains 29 indian states flavour.:)', 3, 'images/thali.jpg');
 
 -- --------------------------------------------------------
 
