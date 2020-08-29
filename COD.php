@@ -153,24 +153,14 @@ else {
 
 
  <div class="container" >
-  <h5 class="text-center">Please read the following information about your order.</h5>
   <div class="box">
     <div class="col-md-10" style="float: none; margin: 0 auto; text-align: center;">
-      <h3 style="color: orange;">Your order has been received and placed into out order processing system.</h3>
+    <font color="red"><strong><h3 style="color: Green;">Your order has been received and placed into out order processing system.</h3>
       <br>
-      <h4>Please make a note of your <strong>order number</strong> now and keep in the event you need to communicate with us about yur order.</h4>
-      <br>
-      <h3 style="color: orange;">Getting Your Receipt</h3>
-      <br>
-      <h4>Once your order has been accepted and shipped, we will send you a notification by email. You can then print a format copy of your Receipt from within our Order Status System. </h4>
-      <br>
-      <h3 style="color: orange;">Your Shopping Cart Has Been Emptied</h3>
-      <br>
-      <h4>Please come again.</h4>
-
+      <h3 style="color: red;">Get your Receipt and Please come again.</h3>
     </div>
   </div>
-    <h5>Warning! <strong>Do not reload this page</strong> or the above display will be lost. If you want a hardcopy of this page, please print it now.</h5>
+    <h5>Warning! <strong>Do not reload this page</strong> or the above display will be lost. If you want a hardcopy of this page, please print it now.</h5></strong></font>
   </div>
 
         

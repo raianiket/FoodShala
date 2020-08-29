@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `foodexpo`
+-- Database: `id14722915_foodexpo`
 --
 
 -- --------------------------------------------------------
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `customer`
 --
 
-CREATE TABLE `customer` (
+CREATE TABLE `CUSTOMER` (
   `username` varchar(30) NOT NULL,
   `fullname` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `customer` (
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`username`, `fullname`, `email`, `contact`, `address`, `password`) VALUES
+INSERT INTO `CUSTOMER` (`username`, `fullname`, `email`, `contact`, `address`, `password`) VALUES
 ('ani', 'Aniket', 'ani@gmail.com', '7668514255', 'Varanasi', 'ani123'),
 ('anik12', 'Chikoo', 'chikoo@gmail.com', '8840043812', 'Lucknow', 'chikoo123'),
 ('anku12', 'Ankesh jaiswal', 'anku@gmail.com', '8004237894', 'Faizabad', 'ankesh123');
@@ -50,7 +50,7 @@ INSERT INTO `customer` (`username`, `fullname`, `email`, `contact`, `address`, `
 -- Table structure for table `food`
 --
 
-CREATE TABLE `food` (
+CREATE TABLE `FOOD` (
   `F_ID` int(30) NOT NULL,
   `name` varchar(30) NOT NULL,
   `price` int(30) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `food` (
 -- Dumping data for table `food`
 --
 
-INSERT INTO `food` (`F_ID`, `name`, `price`, `description`, `R_ID`, `images_path`) VALUES
+INSERT INTO `FOOD` (`F_ID`, `name`, `price`, `description`, `R_ID`, `images_path`) VALUES
 (58, 'Paneer Butter Masala', 280, 'Paneer Butter Masala loaded with cheese, Paneer chunks, onion & Mayo and lot of secret things :).', 1, 'images/paneer-butter-masala.jpg'),
 (59, 'Masala Chicken', 60, 'Masala Chicken - Well cooked chicken & served with grilled onions and tomatoes.', 2, 'images/Chicken-Masala.jpg'),
 (60, 'Tutti Fruity Icecream', 99, 'can You Lose all senses over this very delicious tutti fruity flavour.', 3, 'images/tutti-frutti.jpg'),
@@ -77,7 +77,7 @@ INSERT INTO `food` (`F_ID`, `name`, `price`, `description`, `R_ID`, `images_path
 -- Table structure for table `manager`
 --
 
-CREATE TABLE `manager` (
+CREATE TABLE `MANAGER` (
   `username` varchar(30) NOT NULL,
   `fullname` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE `manager` (
 -- Dumping data for table `manager`
 --
 
-INSERT INTO `manager` (`username`, `fullname`, `email`, `contact`, `address`, `password`) VALUES
+INSERT INTO `MANAGER` (`username`, `fullname`, `email`, `contact`, `address`, `password`) VALUES
 ('aditya1', 'Aditya Gupta', 'adi@gmail.com', '9874751259', 'Bombay', 'aditi'),
 ('sandy12', 'Sandesh Mishra', 'sandy@gmail.com', '9894787412', 'UP', 'nikhil'),
 ('hrithik1', 'Hrithik Somwanshi', 'hrx@gmail.com', '7689258761', 'Chennai', 'roshan');
@@ -101,7 +101,7 @@ INSERT INTO `manager` (`username`, `fullname`, `email`, `contact`, `address`, `p
 -- Table structure for table `orders`
 --
 
-CREATE TABLE `orders` (
+CREATE TABLE `ORDERS` (
   `order_ID` int(30) NOT NULL,
   `F_ID` int(30) NOT NULL,
   `foodname` varchar(30) NOT NULL,
@@ -118,7 +118,7 @@ CREATE TABLE `orders` (
 -- Table structure for table `restaurants`
 --
 
-CREATE TABLE `restaurants` (
+CREATE TABLE `RESTAURANTS` (
   `R_ID` int(30) NOT NULL,
   `name` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE `restaurants` (
 -- Dumping data for table `restaurants`
 --
 
-INSERT INTO `restaurants` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`) VALUES
+INSERT INTO `RESTAURANTS` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`) VALUES
 (1, 'Aditya\'s Restaurant', 'adi@restaurant.com', '9874751259', 'Bombay', 'aditya1'),
 (2, 'Sandesh\'s Restaurant', 'sandy@restaurant.com', '9894787412', 'UP', 'sandy12'),
 (3, 'Hrithik\'s Restaurant', 'hrx@restaurant.com', '7689258761', 'Chennai', 'hrithik1');
@@ -141,37 +141,37 @@ INSERT INTO `restaurants` (`R_ID`, `name`, `email`, `contact`, `address`, `M_ID`
 --
 
 --
--- Indexes for table `customer`
+-- Indexes for table `CUSTOMER`
 --
-ALTER TABLE `customer`
+ALTER TABLE `CUSTOMER`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indexes for table `food`
+-- Indexes for table `FOOD`
 --
-ALTER TABLE `food`
+ALTER TABLE `FOOD`
   ADD PRIMARY KEY (`F_ID`,`R_ID`),
   ADD KEY `R_ID` (`R_ID`);
 
 --
--- Indexes for table `manager`
+-- Indexes for table `MANAGER`
 --
-ALTER TABLE `manager`
+ALTER TABLE `MANAGER`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indexes for table `orders`
+-- Indexes for table `ORDERS`
 --
-ALTER TABLE `orders`
+ALTER TABLE `ORDERS`
   ADD PRIMARY KEY (`order_ID`),
   ADD KEY `F_ID` (`F_ID`),
   ADD KEY `username` (`username`),
   ADD KEY `R_ID` (`R_ID`);
 
 --
--- Indexes for table `restaurants`
+-- Indexes for table `RESTAURANTS`
 --
-ALTER TABLE `restaurants`
+ALTER TABLE `RESTAURANTS`
   ADD PRIMARY KEY (`R_ID`),
   ADD UNIQUE KEY `M_ID_2` (`M_ID`),
   ADD KEY `M_ID` (`M_ID`);
@@ -181,43 +181,43 @@ ALTER TABLE `restaurants`
 --
 
 --
--- AUTO_INCREMENT for table `food`
+-- AUTO_INCREMENT for table `FOOD`
 --
-ALTER TABLE `food`
+ALTER TABLE `FOOD`
   MODIFY `F_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT for table `ORDERS`
 --
-ALTER TABLE `orders`
+ALTER TABLE `ORDERS`
   MODIFY `order_ID` int(30) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `restaurants`
+-- AUTO_INCREMENT for table `RESTAURANTS`
 --
-ALTER TABLE `restaurants`
+ALTER TABLE `RESTAURANTS`
   MODIFY `R_ID` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `food`
+-- Constraints for table `FOOD`
 --
-ALTER TABLE `food`
-  ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`R_ID`) REFERENCES `restaurants` (`R_ID`);
+ALTER TABLE `FOOD`
+  ADD CONSTRAINT `food_ibfk_1` FOREIGN KEY (`R_ID`) REFERENCES `RESTAURANTS` (`R_ID`);
 
 --
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`F_ID`) REFERENCES `food` (`F_ID`),
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`username`) REFERENCES `customer` (`username`),
-  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`R_ID`) REFERENCES `restaurants` (`R_ID`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`F_ID`) REFERENCES `FOOD` (`F_ID`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`username`) REFERENCES `CUSTOMER` (`username`),
+  ADD CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`R_ID`) REFERENCES `RESTAURANTS` (`R_ID`);
 
 --
--- Constraints for table `restaurants`
+-- Constraints for table `RESTAURANTS`
 --
-ALTER TABLE `restaurants`
-  ADD CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`M_ID`) REFERENCES `manager` (`username`);
+ALTER TABLE `RESTAURANTS`
+  ADD CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`M_ID`) REFERENCES `MANAGER` (`username`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

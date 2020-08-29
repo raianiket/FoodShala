@@ -10,10 +10,19 @@ body {
   background-size: cover;
   background-position: center;
 /*
-  background: linear-gradient(-90deg,#ff8008, #ffc837);
+  background: linear-gradient(-90deg,#ff8008, #ffc/837);
   */
-}
 
+}
+/* .imgset{
+  border:5px solid black;
+  height:400px;
+} */
+.img-responsive{
+  object-fit: cover;
+  height: 400px !important;
+  
+}
 
 #myBtn{
   display: none;
